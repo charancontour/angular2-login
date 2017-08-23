@@ -1,0 +1,30 @@
+
+<div class="container container-login">
+  <div class="row">
+    <div class="col-md-8 col-md-offset-2">
+      <div class="panel panel-info">
+        <div class="panel-heading">
+          Login
+        </div>
+        <div class="panel-body">
+          <div class="alert alert-danger" *ngIf="errorMsg">
+            {{errorMsg}}
+          </div>
+            <div class="row">
+                <div class="">
+                    <input [(ngModel)]="user.email" type="email"  placeholder="Email">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="">
+                    <input [(ngModel)]="user.password" type="password" placeholder="Password">
+                </div>
+            </div>
+            <button (click)="login()" class="btn btn-info" type="submit" name="action">Login</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
